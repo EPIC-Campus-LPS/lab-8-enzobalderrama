@@ -3,6 +3,12 @@ package packageName;
 public class CapitalCity {
 	private String name;
 	private int population;
+	
+	public CapitalCity(String n, int pop) {
+		name = n;
+		population = pop;
+	}
+	
 	public void setName(String n) {
 		name = n;
 	}
@@ -21,7 +27,7 @@ public class CapitalCity {
 		}
 		return false;
 	}
-	public String toString() {
+	public String toString(String n) {
 		return "CapitalCity(Name=" + name + ", Population=" + population + ")";
 	}
 }
