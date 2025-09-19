@@ -1,0 +1,10 @@
+Fang, Fire, 7
+Misty, Water, 4
+Rocko, Earth, 3
+Shade, Water, 8
+Spark, Fire, 5
+Blossom, Earth, 2
+Frostbite, Water, 6
+Inferno, Fire, 10
+Zephyr, Fire, 4
+Golem, Earth, 9

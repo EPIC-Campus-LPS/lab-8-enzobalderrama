@@ -67,7 +67,7 @@ public class Monster {
 	public String toString() {
 		return "Monster(Name=" + getName() + ", Type=" + getType() + ", Level=" + getLevel() + ")";
 	}
-	public boolean equals(Monster m1, Monster m2) {
+	public boolean equals(Monster m2) {
 		if (getType().equals(m2.getType()) && getName().equals(m2.getName())) {
 			return true;
 		}
