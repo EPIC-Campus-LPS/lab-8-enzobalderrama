@@ -37,7 +37,7 @@ public class Monster {
 	}
 	
 	public Monster basicBattle(Monster m1, Monster m2) {
-		if (getLevel() >= m2.getLevel()) {
+		if (m1.getLevel() >= m2.getLevel()) {
 			return m1;
 		}
 		return m2;

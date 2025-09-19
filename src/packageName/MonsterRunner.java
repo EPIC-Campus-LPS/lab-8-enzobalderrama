@@ -18,8 +18,14 @@ public class MonsterRunner {
 		if (m1 == null) {
 			System.out.println("Monster 1 IS null");
 		}
+		else {
+			System.out.println("Monster 1 is NOT null");
+		}
 		if (m2 == null) {
 			System.out.println("Monster 2 IS null");
+		}
+		else {
+			System.out.println("Monster 2 is NOT null");
 		}
 		Monster bestMonster = null;
 		File file = new File("monsters.txt");
@@ -27,21 +33,19 @@ public class MonsterRunner {
         while(sc.hasNextLine()){
             String weird = sc.nextLine();
             String[] dumbarray = null;
-        	for (int i = 0; i < weird.length()-2; i++) {
-        		dumbarray = weird.split(",");
+        	for (int i = 0; i < weird.length(); i++) {
+        		dumbarray = weird.split(", ");
         	}
-            int inty = sc.nextInt();
-            Monster m3 = new Monster(dumbarray[0], dumbarray[1], inty);
+            Monster m3 = new Monster(dumbarray[0], (dumbarray[1]), Integer.valueOf(dumbarray[2].strip()));
             
             String weirder = sc.nextLine();
             String[] dumberarray = null;
-        	for (int i = 0; i < weirder.length()-2; i++) {
-        		dumberarray = weirder.split(",");
+        	for (int i = 0; i < weirder.length(); i++) {
+        		dumberarray = weirder.split(", ");
         	}
-            int integrity = sc.nextInt();
-            Monster m4 = new Monster(dumberarray[0], dumberarray[1], integrity);
-            
-            Monster m5 = m3.basicBattle(m3, m4);
+        	Monster m4 = new Monster(dumberarray[0], dumberarray[1], Integer.valueOf(dumberarray[2].strip()));
+        	System.out.println(m4);
+        	Monster m5 = m3.basicBattle(m3, m4);
             bestMonster = m5.basicBattle(m5, bestMonster);
         }
         sc.close();
